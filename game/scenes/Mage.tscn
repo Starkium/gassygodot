@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3 uid="uid://b0uupruyyn6si"]
+
+[ext_resource type="Script" uid="uid://sa4tjt77jjg1" path="res://addons/gas_system/AbilitySystem.gd" id="1_q6ldm"]
+[ext_resource type="Script" uid="uid://n1lm74n5qwk6" path="res://game/scripts/Mage.gd" id="1_yh13e"]
+[ext_resource type="Script" uid="uid://cifc1ms21ihwy" path="res://addons/gas_system/AttributeSet.gd" id="2_yh13e"]
+[ext_resource type="Script" uid="uid://bqlde8b46ydlv" path="res://addons/gas_system/Targeting.gd" id="3_vhl5j"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_yh13e"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_yh13e"]
+
+[node name="Mage" type="CharacterBody3D"]
+script = ExtResource("1_yh13e")
+
+[node name="AbilitySystem" type="Node" parent="."]
+script = ExtResource("1_q6ldm")
+metadata/_custom_type_script = "uid://sa4tjt77jjg1"
+
+[node name="AttributeSet" type="Node" parent="."]
+script = ExtResource("2_yh13e")
+metadata/_custom_type_script = "uid://cifc1ms21ihwy"
+
+[node name="Targeting" type="Node" parent="."]
+script = ExtResource("3_vhl5j")
+metadata/_custom_type_script = "uid://bqlde8b46ydlv"
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.55048, -0.457339)
+current = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_yh13e")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_yh13e")

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://b8vb1j6s3dr2j"]
+
+[ext_resource type="PackedScene" uid="uid://dciqyglcx7y6e" path="res://game/scenes/FireballProjectile.tscn" id="1_3at0f"]
+[ext_resource type="Script" uid="uid://duus6rr1dclm3" path="res://game/resources/Abilities/Fireball.gd" id="2_qh40k"]
+
+[resource]
+script = ExtResource("2_qh40k")
+projectile_scene = ExtResource("1_3at0f")
+ability_tag = "Ability.Fireball"
+blocked_tags = []
+cooldown = 1.5
+cost = {
+"mana": 10.0
+}
+required_tags = []
+metadata/_custom_type_script = "uid://b6jgx52txwb8j"

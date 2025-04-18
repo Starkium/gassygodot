@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="GameplayEffect" load_steps=2 format=3 uid="uid://bcm6v18leprkg"]
+
+[ext_resource type="Script" uid="uid://budjoqhgaecnd" path="res://addons/gas_system/GameplayEffect.gd" id="1_cfbfu"]
+
+[resource]
+script = ExtResource("1_cfbfu")
+add_tags = ["State.Shielded"]
+attribute_mods = {}
+duration = 6.0
+period = 1.0
+remove_tags = []
+stacking_rule = 2
+metadata/_custom_type_script = "uid://budjoqhgaecnd"

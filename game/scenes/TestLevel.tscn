@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://clvii3y2cwq37"]
+
+[ext_resource type="PackedScene" uid="uid://b0uupruyyn6si" path="res://game/scenes/Mage.tscn" id="1_dboac"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_dboac"]
+size = Vector3(50, 1, 50)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8dmka"]
+size = Vector3(50, 1, 50)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rejfc"]
+
+[sub_resource type="Sky" id="Sky_pr1my"]
+sky_material = SubResource("ProceduralSkyMaterial_rejfc")
+
+[sub_resource type="Environment" id="Environment_afig7"]
+background_mode = 2
+sky = SubResource("Sky_pr1my")
+ambient_light_source = 3
+ambient_light_energy = 2.0
+tonemap_mode = 3
+
+[node name="TestLevel" type="Node3D"]
+
+[node name="Mage" parent="." instance=ExtResource("1_dboac")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.54986, 0)
+
+[node name="Floor" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_dboac")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Floor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/StaticBody3D"]
+shape = SubResource("BoxShape3D_8dmka")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_afig7")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 0.930654, 0.3659, 0, -0.3659, 0.930654, 0, 3.69762, 0)
+shadow_enabled = true
+directional_shadow_mode = 0

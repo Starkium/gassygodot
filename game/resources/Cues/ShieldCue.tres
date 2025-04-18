@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="GameplayCue" load_steps=2 format=3 uid="uid://bbqeakvvnxjxs"]
+
+[ext_resource type="Script" uid="uid://ce2gcbtt2ksab" path="res://addons/gas_system/GameplayCue.gd" id="1_inp7p"]
+
+[resource]
+script = ExtResource("1_inp7p")
+metadata/_custom_type_script = "uid://ce2gcbtt2ksab"

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="GameplayEffect" load_steps=2 format=3 uid="uid://ce7f63g8pjxqc"]
+
+[ext_resource type="Script" uid="uid://budjoqhgaecnd" path="res://addons/gas_system/GameplayEffect.gd" id="1_64ugh"]
+
+[resource]
+script = ExtResource("1_64ugh")
+add_tags = []
+attribute_mods = {}
+duration = 3.0
+period = 1.0
+remove_tags = []
+stacking_rule = 2
+metadata/_custom_type_script = "uid://budjoqhgaecnd"
