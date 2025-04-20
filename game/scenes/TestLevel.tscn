@@ -39,4 +39,3 @@ environment = SubResource("Environment_afig7")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
 transform = Transform3D(1, 0, 0, 0, 0.930654, 0.3659, 0, -0.3659, 0.930654, 0, 3.69762, 0)
 shadow_enabled = true
-directional_shadow_mode = 0

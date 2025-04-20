@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("2_qh40k")
 projectile_scene = ExtResource("1_3at0f")
+spawn_offset = 20.0
 ability_tag = "Ability.Fireball"
 blocked_tags = []
 cooldown = 1.5

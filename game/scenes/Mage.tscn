@@ -12,6 +12,16 @@
 [node name="Mage" type="CharacterBody3D"]
 script = ExtResource("1_yh13e")
 
+[node name="headTarget" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.54361, 0)
+
+[node name="cameraTarget" type="Node3D" parent="headTarget"]
+
+[node name="actualHead" type="Node3D" parent="."]
+
+[node name="actualCamera" type="Camera3D" parent="actualHead"]
+current = true
+
 [node name="AbilitySystem" type="Node" parent="."]
 script = ExtResource("1_q6ldm")
 metadata/_custom_type_script = "uid://sa4tjt77jjg1"
@@ -23,10 +33,6 @@ metadata/_custom_type_script = "uid://cifc1ms21ihwy"
 [node name="Targeting" type="Node" parent="."]
 script = ExtResource("3_vhl5j")
 metadata/_custom_type_script = "uid://bqlde8b46ydlv"
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.55048, -0.457339)
-current = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("CapsuleMesh_yh13e")

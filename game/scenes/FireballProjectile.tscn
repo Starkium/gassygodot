@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dciqyglcx7y6e"]
+[gd_scene load_steps=5 format=3 uid="uid://dciqyglcx7y6e"]
 
 [ext_resource type="Script" uid="uid://buo7vsu4u86jp" path="res://game/scripts/FireballProjectile.gd" id="1_pul5s"]
+[ext_resource type="Resource" uid="uid://cgbtf0fpm3b8n" path="res://game/resources/Effects/DamageEffect.tres" id="2_ux8s4"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_q4pbd"]
 
@@ -8,6 +9,7 @@
 
 [node name="FireballProjectile" type="Area3D"]
 script = ExtResource("1_pul5s")
+damage_effect = ExtResource("2_ux8s4")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("SphereMesh_q4pbd")
